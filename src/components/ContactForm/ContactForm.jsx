@@ -43,7 +43,7 @@ class ContactForm extends Component {
 
     // Отправка данных после проверки в экшн
     if (!nameInContacts && !numberInContacts) {
-      this.props.onSubmit(normalizedName, number);
+      this.props.onSubmit(name, number);
       this.resetForm();
       return;
     }
@@ -69,7 +69,7 @@ class ContactForm extends Component {
           <input
             type="text"
             name="name"
-            placeholder="Contact name"
+            placeholder="Enter contact name"
             aria-label="Input for your name"
             className={styles.input}
             value={this.state.name} // Пишет значение в локальный стейт
@@ -85,7 +85,7 @@ class ContactForm extends Component {
           <input
             type="tel"
             name="number"
-            placeholder="Phone number"
+            placeholder="Enter phone number"
             aria-label="Input for your phone number"
             className={styles.input}
             value={this.state.number} // Пишет значение в локальный стейт
